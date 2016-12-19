@@ -22,9 +22,13 @@
         {% include "footer.html" %}
     {% endblock %}
 
-=======
     </head>
     <body>
+
+    {% block nav %}
+      {% include "nav.html" %}
+    {% endblock  %}
+
     {% block content %}
     {% endblock %}
 
