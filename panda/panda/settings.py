@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'pandapps',
 ]
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
