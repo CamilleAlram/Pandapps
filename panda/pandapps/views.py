@@ -1,13 +1,10 @@
 from django.views.generic import TemplateView
 from . import models
-<<<<<<< HEAD
 from . import forms
 import locale
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
-=======
 import locale
->>>>>>> Premier affichage des vidéos avec titre. Modification du lien enregistrer pour qu'il puisse s'afficher sans avoir à modifier le lien manuellement
 locale.setlocale(locale.LC_ALL, "fr_FR.UTF-8")
 
 
