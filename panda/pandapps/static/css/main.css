@@ -1,0 +1,58 @@
+h1.header {
+    background-color: #B22222;
+    color: white;
+    margin: 0;
+    font-size: 100px;
+    font-family: courier;
+}
+h2.video_bas{
+    color: #B22222;
+    font-size: 25px;
+    padding: 450px 0 30px 0;
+    text-align: center;
+}
+
+.nav {
+    background-color: #B22222;
+    color: white;
+    border: solid white 1px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.middle {
+    text-align: center;
+}
+
+.title {
+    color: #B22222;
+    font-size: 30px;
+}
+
+.column{
+    background-color: #B22222;
+    height: 950px;
+}
+
+.table_form{
+    margin-top: 50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.table_button{
+    margin-right:auto;
+
+}
+
+.table_form tbody tr{
+    margin: 100px;
+}
+
+.footer{
+    background-color: #B22222;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}

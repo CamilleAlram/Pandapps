@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-2 column"></div>
+        <div class="col-md-8 middle">
+            <div class="row">
+                <div class="col-md-12">
+                    {% for video in video_first %}
+                        <div class="title">{{ video.title }} </div>
+                        <div class="video">
+                            <object width="425" height="355">
+                                <param name="movie" value="{{video.link}}"/>
+                                <param name="wmode" value="transparent"/>
+                                <embed src="{{video.link}}" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"/>
+                            </object>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <h2 class="video_bas">Previous</h2>
+                    {% for video in videos_bas %}
+                        <div class="col-md-4">
+                            <div class="video">
+                                <object width="300 " height="255">
+                                    <param name="movie" value="{{video.link}}"/>
+                                    <param name="wmode" value="transparent"/>
+                                    <embed src="{{video.link}}" type="application/x-shockwave-flash" wmode="transparent" width="200" height="200"/>
+                                </object>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 column"></div>
+    </div>
+{% endblock %}
