@@ -38,6 +38,11 @@ class HomePage(TemplateView):
         return list_result[-3:]
 
 
+class VideosPage(TemplateView):
+
+    template_name = 'videos.html'
+
+
 class ContactPage(TemplateView):
 
     template_name = 'contact.html'
