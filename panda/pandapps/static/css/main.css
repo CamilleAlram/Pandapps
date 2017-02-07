@@ -36,7 +36,7 @@ h2.video_bas{
 }
 
 .form_contact{
-    // text-align: center;
+    text-align: right;
 }
 
 .table_form{
@@ -45,21 +45,15 @@ h2.video_bas{
     margin-right:auto;
 }
 
-.table_button{
-    margin-right:auto;
-
+.message_contact{
+    color: gray;
+    bottom: 30px;
+    position: fixed;
 }
 
-.table_form tbody tr{
-    margin: 100px;
-}
-
-.footer{
+#footer{
     background-color: #B22222;
     color: white;
     font-size: 15px;
     text-align: center;
-
-body{
-    color:red;
 }
