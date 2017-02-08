@@ -42,6 +42,11 @@ class VideosPage(TemplateView):
 
     template_name = 'videos.html'
 
+    def get_context_data(self, *args, **kwargs):
+        ctx = super(VideosPage, self).get_context_data(*args, **kwargs)
+        ctx['videos'] = models.Video.objects.all()
+        return ctx
+
 
 class ContactPage(TemplateView):
 

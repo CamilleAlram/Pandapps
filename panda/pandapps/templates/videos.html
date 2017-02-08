@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-2 column"></div>
+        <div class="col-md-8">
+            {% for video in videos %}
+                <div class="col-md-4">
+                    <div class="video">
+                        <object width="300 " height="255">
+                            <param name="movie" value="{{video.link}}"/>
+                            <param name="wmode" value="transparent"/>
+                            <embed src="{{video.link}}" type="application/x-shockwave-flash" wmode="transparent" width="200" height="200"/>
+                            {{video.title}}
+                        </object>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="col-md-2 column"></div>
+    </div>
+{% endblock %}
