@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-2 column"></div>
+        <div class="col-md-8">
+            <div class="article">
+                <span class="title">{{article.title}}</span>
+                <img  src="{{article.photo.url}}">&nbsp;
+                {{article.description}}
+            </div>
+        </div>
+        <div class="col-md-2 column"></div>
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-2 column"></div>
+        <div class="col-md-8">
+            {% for article in articles %}
+                <div class="col-md-4">
+                    <div class="article">
+                        {{article.title}}
+                        {{article.description}}
+                        <a href="{% url 'detail-article' article.id %}">Lire la suite</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="col-md-2 column"></div>
+    </div>
+{% endblock %}

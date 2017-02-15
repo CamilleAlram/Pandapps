@@ -123,11 +123,13 @@ USE_TZ = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'camillealram@gmail.com'
-EMAIL_HOST_PASSWORD = 'xx.cam123.xx'
+EMAIL_HOST_USER = #Adresse Mail
+EMAIL_HOST_PASSWORD = #MDP
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

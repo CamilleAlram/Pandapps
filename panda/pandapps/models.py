@@ -22,11 +22,10 @@ class Article(models.Model):
         max_length=200
     )
     date = models.DateField(auto_now_add=True)
-    photo = models.CharField(
-        null=True,
-        blank=True,
-        max_length=200
-    )
+    photo = models.ImageField(null=True)
+
+    def __str__(self):
+        return self.title
 
 
 class Contact(models.Model):

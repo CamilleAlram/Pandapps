@@ -4,6 +4,7 @@ from . import forms
 import locale
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render
 import locale
 locale.setlocale(locale.LC_ALL, "fr_FR.UTF-8")
 
@@ -36,6 +37,22 @@ class HomePage(TemplateView):
         list_result = list_result = [entry for entry in video]
         list_result = list(list_result)
         return list_result[-3:]
+
+
+class ArticlesPage(TemplateView):
+
+    template_name = 'articles.html'
+
+    def get_context_data(self, *args, **kwargs):
+        ctx = super(ArticlesPage, self).get_context_data(*args, **kwargs)
+        ctx['articles'] = models.Article.objects.all()
+        return ctx
+
+
+def detail(request, id):
+    article = models.Article.objects.get(id=id)
+
+    return render(request, 'detail-article.html', {'article': article})
 
 
 class VideosPage(TemplateView):
