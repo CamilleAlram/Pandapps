@@ -2,8 +2,7 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-md-2 column"></div>
-        <div class="col-md-8">
+        <div class="col-md-8 col-md-offset-2 column">
             {% for video in videos %}
                 <div class="col-md-4">
                     <div class="video">
@@ -17,6 +16,5 @@
                 </div>
             {% endfor %}
         </div>
-        <div class="col-md-2 column"></div>
     </div>
 {% endblock %}

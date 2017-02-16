@@ -2,14 +2,12 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-md-2 column"></div>
-        <div class="col-md-8">
+        <div class="col-md-8 col-md-offset-2 column">
             <div class="article">
-                <span class="title">{{article.title}}</span>
-                <img  src="{{article.photo.url}}">&nbsp;
-                {{article.description}}
+                <p class="title">{{article.title}}</p>
+                <p><img class="image" src="{{article.photo.url}}">&nbsp;</p>
+                <p>{{article.description}}</p>
             </div>
         </div>
-        <div class="col-md-2 column"></div>
     </div>
 {% endblock %}

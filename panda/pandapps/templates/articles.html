@@ -2,18 +2,15 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-md-2 column"></div>
-        <div class="col-md-8">
-            {% for article in articles %}
-                <div class="col-md-4">
-                    <div class="article">
-                        {{article.title}}
-                        {{article.description}}
-                        <a href="{% url 'detail-article' article.id %}">Lire la suite</a>
-                    </div>
+        <div class="col-md-8 col-md-offset-2 column">
+            {% for article in articles reversed %}
+                <div class="article">
+                    <span class="title">{{article.title}}</span>
+                    <p><img class="image" src="{{article.photo.url}}">&nbsp;</p>
+                    <p>{{article.description}}</p>
+                    <p><a href="{% url 'detail-article' article.id %}">Lire la suite</a></p>
                 </div>
             {% endfor %}
         </div>
-        <div class="col-md-2 column"></div>
     </div>
 {% endblock %}
